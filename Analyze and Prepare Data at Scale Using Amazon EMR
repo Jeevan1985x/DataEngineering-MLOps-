@@ -1,0 +1,61 @@
+Analyze and Prepare Data at Scale Using Amazon EMR
+To discover and securely connect to an EMR cluster directly from SageMaker Studio. You use a SageMaker Studio notebook to visually discover, authenticate with, and connect to an EMR cluster. You then query an Apache Hive table on Amazon EMR using Apache Spark.
+
+Objectives
+After completing this lab, you will be able to do the following:
+
+Connect a SageMaker Studio notebook to an EMR cluster.
+Explore and query data from the SparkMagic PySpark kernel.
+
+Open a new browser tab, and then paste the SageMakerStudioUrl into the address bar.
+https://us-west-2.console.aws.amazon.com/sagemaker/home?region=us-west-2#/studio/open/d-z90kau2hujar/SageMakerStudioUser/LabSpace/JupyterLab
+Press Enter.
+A new browser tab opens, taking you to the JuypterLab workspaces interface.
+
+Next, you clone a Git repository and open your lab repository folder.
+
+In the left menu bar, choose the Git icon.
+
+Choose Clone a Repository.
+
+The SageMaker Studio environment displays the Clone Git Repository window.
+
+For Git repository URL (.git):, copy and paste the CloneUrlForRepo value listed to the left of these instructions, and select the suggested url from the dropdown menu.
+
+Choose Clone.
+
+Wait for the repository cloning to complete.
+
+The SageMaker Studio environment opens the lab3repo folder when the clone completes
+
+Task 2: Connect to an EMR cluster
+In this task, you use a SageMaker Studio notebook to visually discover, authenticate with, and connect to an EMR cluster. By establishing this connection, you can use the notebook to interact with the data hosted on Amazon EMR.
+
+From the left navigation pane, open the lab_3.ipynb notebook.
+
+On the Select Kernel pop-up window, for Select Kernel for parameter, choose SparkMagic PySpark.
+
+Choose Select.
+
+ Note: If you don’t see the Select Kernel pop-up window, in the upper–right area of the notebook, choose Python 3 (ipykernel) to get to the Select Kernel pop-up window and choose the SparkMagic PySpark kernel for your notebook.
+
+In the upper–right area of the notebook, choose Cluster.
+The SageMaker Studio environment displays the Connect to cluster window.
+
+On the Connect to cluster window, choose the EMR CLUSTERS tab.
+
+Choose the cluster with the name EMR-Cluster-Lab3 and cluster ID starting with j-.
+
+Choose Connect.
+
+The SageMaker Studio environment displays the Select credential type for “EMR-Cluster-Lab3” window.
+
+In the Select credential type for “EMR-Cluster-Lab3” dialog box, choose the No credential option.
+ Note: For this lab, for simplicity, you use a No-Auth authentication.
+
+Choose Connect.
+ Note: It takes approximately 1–2 minutes to connect to the cluster.
+
+This adds a code block to the active cell in the notebook and runs automatically to establish a connection.
+
+After the Spark application has started, a SparkSession available as ‘spark’ message is displayed in the notebook.
